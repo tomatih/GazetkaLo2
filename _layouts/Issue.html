@@ -1,0 +1,6 @@
+---
+layout: Wrapper
+---
+{% for a in site.posts %}
+    {%if a.nr == page.issue%}<h2><a href="{{a.url}}">{{a.title}}</a></h2> {%endif%}
+{%endfor%}
