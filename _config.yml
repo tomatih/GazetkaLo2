@@ -33,7 +33,7 @@ defaults:
       path: "_posts"
     values:
       layout: Article
-      permalink: "/:categories/:title.html"
+      permalink: "/:categories/:title"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
