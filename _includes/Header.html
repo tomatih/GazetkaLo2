@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-xs-12 text-center">
-		<a href="{{site.index}}">
+		<a href="{{site.url}}/home/index.html">
 			<img src="{% for a in site.static_files%}{%if a.name=='logo.png'%}{{a.path}}{%endif%}{%endfor%}" class="img-fluid" alt="Logo gazetki">
 		</a>
 	</div>
@@ -10,7 +10,8 @@
 		</div>
 		<div class="col-xs-12 col-md-6">
 			<div class="text-right">
-		    <h4>Numer 0/0</h4>
+			{% if page.nr != nill %}<h4>Numer {{page.nr}}/20{{ page.date | date: '%y' }}</h4>{%endif%}
+			{% if page.issue != nill %}<h4>Numer {{page.issue}}/20{{ page.date | date: '%y' }}</h4>{%endif%}
 		</div>
 		</div>
 	</div>

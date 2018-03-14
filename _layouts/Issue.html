@@ -2,5 +2,9 @@
 layout: Wrapper
 ---
 {% for a in site.posts %}
-    {%if a.nr == page.issue%}<h2><a href="{{a.url}}">{{a.title}}</a></h2> {%endif%}
-{%endfor%}
+    {%if a.nr == page.issue%}
+        <div class="col-xs-12 col-md-6">
+            <h1><a href="{{a.url}}">{{a.title}}{% for b in site.static_files%}{%if b.basename==a.picture %}<img src="{{b.path}}" alt="" style="margin-bottom: 20px">{%endif%}{%endfor%}</a></h1>
+        </div>
+    {%endif%}
+{%endfor%}+
