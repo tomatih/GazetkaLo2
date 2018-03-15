@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col-xs-12 text-center">
 		<a href="{{site.url}}">
-			<img src="{% for a in site.static_files%}{%if a.name=='logo.png'%}{{a.path}}{%endif%}{%endfor%}" class="img-fluid" alt="Logo gazetki">
+			<img src="{% for a in site.static_files%}{%if a.name=='logo.png'%}{{site.url}}{{a.path}}{%endif%}{%endfor%}" class="img-fluid" alt="Logo gazetki">
 		</a>
 	</div>
 	<div class="row">
